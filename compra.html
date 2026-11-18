@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AGROMATIC | Compra</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="index.html" aria-label="AGROMATIC inicio">
+          <span class="brand-mark">💧</span>
+          <span>AGROMATIC</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="producto.html">Producto</a>
+          <a href="compra.html" class="active">Compra</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="donde-estamos.html">Dónde estamos</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-secondary" href="contacto.html">Ayuda</a>
+          <a class="btn btn-primary" href="producto.html">Volver al producto</a>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </header>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/543534135144?text=Hola%20AGROMATIC%2C%20quiero%20consultar%20sobre%20mi%20compra."
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
+      title="Contactar por WhatsApp"
+    >💬</a>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-card">
+            <span class="eyebrow">Checkout seguro</span>
+            <h1>Finalizá tu compra</h1>
+            <p>
+              Completa el proceso de pago con tu tarjeta de crédito o débito. Si prefieres otro método, te derivamos a atención personalizada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container checkout-layout">
+          <div>
+            <div class="stepper" aria-label="Paso a paso del pago">
+              <div class="step active"><span class="step-number">1</span> Envío</div>
+              <div class="step"><span class="step-number">2</span> Pago</div>
+              <div class="step"><span class="step-number">3</span> Confirmación</div>
+            </div>
+
+            <form id="checkout-form" class="form-card">
+              <div class="checkout-step">
+                <h2 style="margin-top:0;">Datos de entrega</h2>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" placeholder="Tu nombre" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="apellido">Apellido</label>
+                    <input id="apellido" type="text" placeholder="Tu apellido" required />
+                  </div>
+
+                  <div class="field full">
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" type="text" placeholder="Calle, número, piso" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="ciudad">Ciudad</label>
+                    <input id="ciudad" type="text" placeholder="Ciudad" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="codigo-postal">Código postal</label>
+                    <input id="codigo-postal" type="text" placeholder="Código postal" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="tel" placeholder="Número de contacto" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="pais">País</label>
+                    <select id="pais" required>
+                      <option value="">Seleccioná</option>
+                      <option>Argentina</option>
+                      <option>Chile</option>
+                      <option>Colombia</option>
+                      <option>España</option>
+                      <option>Mexico</option>
+                      <option>Uruguay</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="checkout-actions">
+                  <button type="button" class="btn btn-primary" data-next-step>Continuar al pago</button>
+                </div>
+              </div>
+
+              <div class="checkout-step" style="display:none;">
+                <h2 style="margin-top:0;">Método de pago</h2>
+                <div class="payment-methods">
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="card" checked />
+                    <span>Tarjeta de crédito o débito</span>
+                    <span class="card-pill">Visa / Mastercard</span>
+                  </label>
+
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="transfer" />
+                    <span>Transferencia bancaria</span>
+                  </label>
+
+                  <label class="payment-option">
+                    <input type="radio" name="payment-method" value="cash" />
+                    <span>Otro método</span>
+                  </label>
+                </div>
+
+                <div id="card-fields" class="form-grid" style="margin-top: 20px;">
+                  <div class="field full">
+                    <label for="card-holder">Nombre del titular</label>
+                    <input id="card-holder" type="text" placeholder="Como aparece en la tarjeta" required />
+                  </div>
+
+                  <div class="field full">
+                    <label for="card-number">Número de tarjeta</label>
+                    <input id="card-number" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="card-expiry">Vencimiento</label>
+                    <input id="card-expiry" type="text" placeholder="MM/AA" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="card-cvc">CVC</label>
+                    <input id="card-cvc" type="text" inputmode="numeric" placeholder="123" required />
+                  </div>
+                </div>
+
+                <div class="checkout-actions">
+                  <button type="button" class="btn btn-secondary" data-prev-step>Volver</button>
+                  <button type="submit" class="btn btn-primary" data-submit-payment>Confirmar pago</button>
+                </div>
+              </div>
+
+              <div class="checkout-step" style="display:none;">
+                <h2 style="margin-top:0;">Pedido confirmado</h2>
+                <div id="order-success" class="order-success" role="status" aria-live="polite">
+                  Pedido confirmado. Tu sistema de riego AGROMATIC ya está en preparación.
+                </div>
+                <div class="checkout-actions">
+                  <a class="btn btn-primary" href="index.html">Volver al inicio</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <aside class="summary-card">
+            <h3>Resumen del pedido</h3>
+            <div class="summary-item">
+              <span class="label">AGROMATIC Pro</span>
+              <span>$249</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Envío</span>
+              <span>$19</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">IVA</span>
+              <span>$40</span>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span>$308</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand" style="margin-bottom: 8px;">
+            <span class="brand-mark">💧</span>
+            <span>AGROMATIC</span>
+          </div>
+          <p class="footer-copy">Soluciones de riego automatizado para un jardín más inteligente.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="producto.html">Producto</a>
+          <a href="compra.html">Compra</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="donde-estamos.html">Dónde estamos</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
